@@ -5,11 +5,11 @@ Guia de Estilo de Código
 
 O documento a seguir descreve as regras de escrita nas linguagens de desenvolvimento que utilizamos: HTML, CSS e JavaScript.
 
-A ideia desse documento/repositório não é ser um guia de código completo. Mas sim ter um local para que os times que participam dos projetos possam se informar dos padrões de códigos usados.
+A ideia desse *documento/repositório* não é ser um guia de código completo. Mas, sim, ter um local para que os times que participam dos projetos possam se informar sobre padrões de códigos atualmente usados.
 
 Como este documento é novo, algumas regras podem não ter sido aplicadas em projetos antigos.
 
-Este é um documento vivo e mudanças podem e devem - se necessário - acontecer a qualquer momento.
+Este é um documento vivo e mudanças podem, e devem, se necessário, acontecer a qualquer momento.
 
 ## Sumário
 
@@ -24,13 +24,13 @@ Este é um documento vivo e mudanças podem e devem - se necessário - acontecer
 <a name="commits"></a>
 ## 1. Commits
 
-Para facilitar a contribuição de qualquer pessoa nos projetos, todas as mensagens de commit, pull requests ou discussões devem ser em **Inglês**.
+Para facilitar a contribuição de qualquer pessoa nos projetos, todas as mensagens de *commit*, *pull requests* ou *discussões* devem ser em **Inglês**.
 
-Antes de commitar ajustes no projeto, verifique se existe uma task/issue aberta e faça referência a ela usando '#' na sua mensagem de commit.
+Antes de *commitar* ajustes no projeto, verifique se já existe uma *task*/*issue* aberta e faça referência a ela usando '*#*' na sua mensagem de *commit*.
 
 ```javascript
 // Bom
-git commit -m "Add placeholder on input #10"
+git commit -m "Add placeholder on input #798"
 
 // Ruim
 git commit -m "Add placeholder on input"
@@ -53,7 +53,8 @@ A principal influencia das regras de HTML é o [Code Guide by @mdo](https://gith
 <a name="html-syntax"></a>
 ### 2.1. HTML Sintaxe
 
-Use soft-tabs com dois espaços - quatro espaços dependendo do tamanho das linhas/código pode dificultar uma rápida leitura.
+Use *soft-tabs* com dois espaços. Quatro espaços, dependendo do tamanho das *linhas/código*, pode dificultar uma rápida leitura.
+
 Você pode configurar o seu editor preferido dessa forma.
 
 ```html
@@ -166,7 +167,7 @@ Os atributos do HTML devem estar na seguinte ordem para facilitar a leitura.
 <a name="html-performance"></a>
 ### 2.5. HTML Performance
 
-Nos includes dos arquivos CSS e JavaScript não é necessário especificar o tipo de arquivo como `text/css` e `text/javascript`.
+Nos *includes* dos arquivos CSS e JavaScript **não** é necessário especificar o tipo de arquivo como `text/css` e `text/javascript`.
 
 ```html
 <!-- Bom -->
@@ -214,7 +215,7 @@ Quando o projeto usar apenas HTML, sempre minifique o código. Automatizadores d
 <a name="html-base"></a>
 ### 2.6. HTML Código Base
 
-O código a seguir é uma base em HTML para iniciar rápidamente os projetos.
+O código a seguir é uma base em HTML para iniciar rapidamente os projetos.
 
 ```html
 <!DOCTYPE html>
@@ -246,9 +247,9 @@ Para fornecer suporte para versões antigas do Internet Explorer...
 ```html
 <!DOCTYPE html>
 <!--[if IE]><![endif]-->
-<!--[if IE 7 ]> <html lang="en" class="ie7">    <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="ie8">    <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="ie9">    <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="ie9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="pt-br"><!--<![endif]-->
 <head>
 ...
@@ -257,7 +258,7 @@ Para fornecer suporte para versões antigas do Internet Explorer...
 <a name="css"></a>
 ## 3. CSS
 
-A principal influencia para as regras de CSS são o [Code Guide by @mdo](https://github.com/mdo/code-guide) e o [idiomatic CSS](https://github.com/necolas/idiomatic-css/).
+A principal influência para as regras de CSS são o [Code Guide by @mdo](https://github.com/mdo/code-guide) e o [idiomatic CSS](https://github.com/necolas/idiomatic-css/).
 
 ### CSS Sumário
 
@@ -271,7 +272,9 @@ A principal influencia para as regras de CSS são o [Code Guide by @mdo](https:/
 <a name="css-syntax"></a>
 ### 3.1. CSS Sintaxe
 
-Use soft-tabs com dois espaços. Você pode configurar o seu editor preferido dessa forma.
+Use *soft-tabs* com dois espaços.
+
+Você pode configurar o seu editor preferido dessa forma.
 
 ```css
 /* Bom */
@@ -349,7 +352,7 @@ Inclua um `;` no fim da declaração.
 }
 ```
 
-Mantenha uma declaração por linha.
+Mantenha apenas uma declaração por linha.
 
 ```css
 /* Bom */
@@ -365,7 +368,7 @@ Mantenha uma declaração por linha.
 }
 ```
 
-Declarações únicas devem ficar em uma linha.
+Declarações únicas devem ficar em uma linha apenas.
 
 ```css
 /* Bom */
@@ -398,7 +401,7 @@ Separe as regras por uma linha em branco.
 }
 ```
 
-Use caixa-baixa, valores hexadecimais reduzidos e não especifique unidades quando o valor é zero.
+Use texto em caixa baixa, valores hexadecimais reduzidos e não especifique unidades quando o valor é zero.
 
 ```css
 /* Bom */
@@ -448,7 +451,7 @@ As declarações devem ser adicionadas em ordem alfabética.
 <a name="css-class-name"></a>
 ### 3.3. CSS Nome das Classes
 
-Mantenha as classes em caixa-baixa e use hífen para separar os nomes.
+Mantenha as classes em caixa baixa e use hífen para separar os nomes.
 
 ```css
 /* Bom */
@@ -473,24 +476,28 @@ Hífens servem como uma transição natural entre classes relacionadas. O primei
 .link-nav { ... }
 ```
 
-Evite usar nomes muito curtos e sempre use nomes relacionados com a função da classe.
+Nunca use abreviações nos nomes das classes.
+
+Sempre use nomes de classe semanticamente relacionados com o **conteúdo do elemento** e jamais relacionados com a formatação visual deste.
 
 ```css
 /* Bom */
 .btn { ... }
 .page-header { ... }
 .progress-bar { ... }
+.secundary-box { ... }
 
 /* Ruim */
 .s { ... }
 .ph { ... }
 .block { ... }
+.blue-box { ... }
 ```
 
 <a name="css-performance"></a>
 ### 3.4. CSS Performance
 
-Nunca use IDs. Use somente quando necessário de fato.
+Evite o uso de IDs. Use somente quando necessário de fato.
 
 ```css
 /* Bom */
@@ -502,7 +509,7 @@ Nunca use IDs. Use somente quando necessário de fato.
 #section { ... }
 ```
 
-Não use seletores padrões para regras genéricas. Sempre use classes.
+Evite seletores padrões para regras genéricas. Sempre use classes.
 
 ```css
 /* Bom */
@@ -561,7 +568,9 @@ Sempre minifique o código CSS. Automatizadores de tarefas como o [Gulp](http://
 <a name="css-media-queries"></a>
 ### 3.5 Mobile First and Media Queries
 
-Comece o desenvolvimento usando regras genéricas e adiciona media queries começando com mobile. Compartilho um artigo com mais informações, [CSS Modular com Mobile First](http://www.felipefialho.com/blog/2014/css-modular-com-mobile-first/).
+Comece o desenvolvimento usando regras genéricas e adicione media queries começando com mobile.
+
+Compartilho um artigo com mais informações [CSS Modular com Mobile First](http://www.felipefialho.com/blog/2014/css-modular-com-mobile-first/).
 
 ```css
 /* Bom */
@@ -605,7 +614,7 @@ Comece o desenvolvimento usando regras genéricas e adiciona media queries come�
 
 ```
 
-Mantenha os media queries o mais próximo possível da regra que deseja alterar. Não coloque em documentos separados ou no fim do stylesheet.
+Mantenha os media queries o mais próximo possível da regra que deseja alterar. Jamais coloque em documentos separados ou no fim do *stylesheet*.
 
 ```css
 .navbar { ... }
@@ -661,7 +670,7 @@ O ideal é utlizar pré-processadores em todos os projetos. Atualmente a equipe 
 <a name="preprocessors-syntax"></a>
 ### 4.1. CSS Pré-processadores Sintaxe
 
-Use soft-tabs com dois espaços. Você pode configurar o seu editor preferido dessa forma.
+Use *soft-tabs* com dois espaços. Você pode configurar o seu editor preferido dessa forma.
 
 ```css
 // Bom
@@ -675,7 +684,7 @@ Use soft-tabs com dois espaços. Você pode configurar o seu editor preferido de
 }  
 ```
 
-Use ponto e vírgula, dois pontos ou chaves.
+Nunca esqueça do ponto e vírgula, dois pontos e chaves.
 
 ```css
 // Bom
@@ -771,7 +780,9 @@ $gray-white   = #fbfbfb
 <a name="preprocessors-performance"></a>
 ### 4.2. CSS Pré-processadores Performance
 
-Cuidado com a facilidade de aninhar elementos com os pré-processadores. Continue evitando aninhamentos. Se utilizar, mantenha um limite de três elementos aninhados.
+Cuidado com a facilidade de aninhar elementos com os pré-processadores. Continue evitando aninhamentos.
+
+Se utilizar, mantenha um limite de três elementos aninhados.
 
 ```css
 // Bom
@@ -789,7 +800,7 @@ Cuidado com a facilidade de aninhar elementos com os pré-processadores. Continu
 }
 ```
 
-Crie mixins e use o [@include](http://sass-lang.com/guide#topic-6) para adicionar em vários elementos. 
+Crie *mixins* e use o [@include](http://sass-lang.com/guide#topic-6) para adicionar em vários elementos. 
 
 ```css
 @mixin clearfix {
@@ -816,7 +827,7 @@ Crie mixins e use o [@include](http://sass-lang.com/guide#topic-6) para adiciona
 <a name="preprocessors-media-queries"></a>
 ### 4.3. CSS Pré-processadores Media Queries
 
-Forneça as regras de media queries dentro do elemento. 
+Forneça as regras de *media queries* dentro do elemento. 
 
 ```css 
 .navbar {
@@ -908,7 +919,7 @@ As principais influencias para as regras de escrita em JavaScript são o [idioma
 <a name="js-syntax"></a>
 ### 5.1. JavaScript Sintaxe
 
-Use soft-tabs com dois espaços. Você pode configurar o seu editor preferido dessa forma.
+Use *soft-tabs* com dois espaços. Você pode configurar o seu editor preferido dessa forma.
 
 ```js
 // Bom
@@ -946,7 +957,7 @@ var string = "<p class="foo">Lorem Ipsum</p>";
 var noteClick = me.attr("data-note");
 ```
 
-Mantenha o `else` na mesma linha que fechar o `if`.
+Mantenha o `else` na mesma linha em que fechar o `if`.
 
 ```js
 // Bom
@@ -1042,7 +1053,7 @@ if (foo == 'foo') {
 <a name="js-variables"></a>
 ### 5.2. JavaScript Variáveis
 
-Todas as variáveis devem ser declaradas antes de usar.
+Todas as variáveis devem ser declaradas antes do seu uso.
 
 ```js
 // Bom
