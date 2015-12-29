@@ -26,11 +26,11 @@ Este é um documento vivo e mudanças podem, e devem, se necessário, acontecer 
 
 Para facilitar a contribuição de qualquer pessoa nos projetos, todas as mensagens de *commit*, *pull requests* ou *discussões* devem ser em **Inglês**.
 
-Antes de *commitar* ajustes no projeto, verifique se já existe uma *task*/*issue* aberta e faça referência a ela usando '*#*' na sua mensagem de *commit*.
+Antes de *commitar* ajustes no projeto, verifique se já existe uma *task*/*issue* aberta e faça referência a ela usando '*#*' no início da sua mensagem de *commit*.
 
 ```javascript
 // Bom
-git commit -m "Add placeholder on input #798"
+git commit -m "#798 Add placeholder on input"
 
 // Ruim
 git commit -m "Add placeholder on input"
@@ -129,8 +129,8 @@ Separe os blocos usando uma linha vazia e agrupe os elementos internos do bloco.
 Siga esta regra para adicionar comentários no HTML.
 
 ```html
-<!-- este é um bom exemplo -->
-<!-- este é um bom exemplo END -->
+<!-- este é um bom exemplo INICIO-->
+<!-- este é um bom exemplo FIM -->
 ```
 
 <a name="html-encoding"></a>
@@ -380,7 +380,7 @@ Declarações únicas devem ficar em uma linha apenas.
 }
 ```
 
-Separe as regras por uma linha em branco.
+Separe as regras por uma linha em branco, inclusive regras de linha única.
 
 ```css
 /* Bom */
@@ -420,19 +420,30 @@ Use texto em caixa baixa, valores hexadecimais reduzidos e não especifique unid
 <a name="css-order"></a>
 ### 3.2. CSS Ordem de Declaração
 
-As declarações devem ser adicionadas em ordem alfabética.
+As declarações devem ser adicionadas em contexto.
 
 ```css
 /* Bom */
 .selector-1 {
-  background: #fff;
-  border: #333 solid 1px;
-  color: #333;
+  /* box model */
   display: block;
   height: 200px;
   margin: 5px;
   padding: 5px;
   width: 200px;
+  
+  /* positioning */
+  float: left;
+  
+  /* Typography */
+  font-family: Arial;
+  font-style: italic;
+  font-weight: bold;
+  
+  /* visual */
+  background: #fff;
+  border: #333 solid 1px;
+  color: #333;
 }
 
 /* Ruim */
@@ -445,6 +456,10 @@ As declarações devem ser adicionadas em ordem alfabética.
   color: #333;
   border: #333 solid 1px;
   display: block;
+  font-family: Arial;
+  font-style: italic;
+  font-weight: bold;
+  float: left;
 }
 ```
 
