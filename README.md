@@ -368,7 +368,7 @@ Inclua um `;` no fim da declaração.
 }
 ```
 
-Mantenha apenas uma declaração por linha.
+Quando agrupar seletores, mantenha apenas um seletor por linha.
 
 ```css
 /* Bom */
@@ -719,7 +719,7 @@ Nunca esqueça do ponto e vírgula, dois pontos e chaves.
   left: 0
 ``` 
 
-Mantenha uma declaração por linha.
+Quando agrupar seletores, mantenha apenas um seletor por linha.
 
 ```css
 // Bom
