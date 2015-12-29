@@ -49,6 +49,7 @@ A principal influencia das regras de HTML é o [Code Guide by @mdo](https://gith
 1. [HTML Ordem dos Atributos](#html-attribute-order)
 1. [HTML Performance](#html-performance)
 1. [HTML Código Base](#html-base)
+1. [HTML Reduzindo o Markup](#html-markup)
 
 <a name="html-syntax"></a>
 ### 2.1. HTML Sintaxe
@@ -253,6 +254,21 @@ Para fornecer suporte para versões antigas do Internet Explorer...
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="pt-br"><!--<![endif]-->
 <head>
 ...
+```
+
+<a name="html-markup"></a>
+### 2.7. HTML Reduzindo o Markup
+
+Sempre que possível, evite elementos pais supérfluos quando escrever HTML.
+
+```html
+<!-- Bom -->
+<img class="avatar" src="...">
+
+<!-- Ruim -->
+<span class="avatar">
+  <img src="...">
+</span>
 ```
 
 <a name="css"></a>
